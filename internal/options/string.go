@@ -68,7 +68,7 @@ func (s *StringCommand) Run() error {
 	if err != nil {
 		logger.ErrorLog("Error during process")
 		logger.ErrorLog("Random string(not complete):")
-		fmt.Fprintf(os.Stdout, "%s", result)
+		fmt.Fprintf(os.Stdout, "%s\n", result)
 		return err
 	}
 
@@ -83,7 +83,7 @@ func (s *StringCommand) Help() {
 Generates a random string with the specified options.
 
 Options:
-	-length, -l         Length of the string (default: 8)
+	-length, -len         Length of the string (default: 8)
 	-no-upper, -u       Exclude uppercase letters
 	-no-lower, -l       Exclude lowercase letters
 	-digits, -d         Include digits
